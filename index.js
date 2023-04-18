@@ -77,7 +77,7 @@ app.post("/books/", async (request, response) => {
             '${onlineStores}'
         );`;
   const dbResponse = await db.run(addBookQuery);
-  const bookId = dbResponse.lastId;
+  const bookId = dbResponse.lastID;
   response.send({ bookId: bookId });
 });
 
